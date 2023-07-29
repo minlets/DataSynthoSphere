@@ -2,11 +2,21 @@ import os
 import sys
 
 import click
+from fuzzywuzzy import fuzz
 
 from ArgsHandler import ArgsHandler
 from DocumentationPrinter import DocumentationPrinter
 
 CONFIGS_DIR = "configs"
+
+def suggest_closest_options(user_input, valid_options, threshold=70):
+    # Find the closest valid options using fuzzywuzzy
+    closest_options = []
+    for option in valid_options:
+        similarity_score = fuzz.partial_ratio(user_input, option)
+        if similarity_score >= threshold:
+            closest_options.append(option)
+    return closest_options
 
 @click.command()
 def main():
@@ -40,7 +50,10 @@ def main():
             elif args.clean_up:
                 args_handler.handle_clean_up()
             else:
-                # If invalid arguments are provided, display the full documentation
+                # If invalid arguments are provided, suggest the closest valid options
+                valid_options = ["--document", "--generate_data", "--load_configs", "--config", "--flattened_keys", "--json_keys", "--clean_up", "--output_file", "--file_format"]
+                suggested_options = suggest_closest_options(sys.argv[1], valid_options)
+                click.echo(f"Invalid option! Did you mean one of these: {', '.join(suggested_options)}")
                 DocumentationPrinter.print_full_documentation()
         except Exception as e:
             click.echo(f"Error: {str(e)}")
