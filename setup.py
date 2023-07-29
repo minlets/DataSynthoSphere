@@ -10,11 +10,14 @@ setup(
     package_dir={'': 'src'},
     entry_points={
         'console_scripts': [
-            'data_generator = main:main'
+            'data_generator = App:App'
         ],
     },
     install_requires=[
         'openpyxl',
-        'PyYAML'
+        'PyYAML',
+        'click',
+        'fuzzywuzzy',
+        'config_handler'
     ],
 )
