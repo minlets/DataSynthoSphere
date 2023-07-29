@@ -1,12 +1,9 @@
 import os
 import sys
 
-from ArgsHandler import ArgsHandler
 
 CONFIGS_DIR = "configs"
 
-def print_full_documentation():
-    # ... (same as before)
 
 def main():
     if not os.path.exists(CONFIGS_DIR):
