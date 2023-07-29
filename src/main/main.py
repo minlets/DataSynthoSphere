@@ -1,16 +1,13 @@
 import os
 import sys
-
 import click
 from fuzzywuzzy import fuzz
-
 from ArgsHandler import ArgsHandler
 from DocumentationPrinter import DocumentationPrinter
 
 CONFIGS_DIR = "configs"
 
 def suggest_closest_options(user_input, valid_options, threshold=70):
-    # Find the closest valid options using fuzzywuzzy
     closest_options = []
     for option in valid_options:
         similarity_score = fuzz.partial_ratio(user_input, option)
@@ -23,17 +20,13 @@ def main():
     if not os.path.exists(CONFIGS_DIR):
         os.makedirs(CONFIGS_DIR)
 
-    config_handler = ConfigHandler()
-    args = config_handler.parse_arguments()
-    config_handler.configure_logging()
-
     args_handler = ArgsHandler()
+    args = args_handler.parse_arguments()
+    args_handler.configure_logging()
 
     if not sys.argv[1:]:
-        # If no arguments are provided, display the full documentation
         DocumentationPrinter.print_full_documentation()
     else:
-        # Parse the command-line arguments and handle accordingly
         try:
             if args.document:
                 DocumentationPrinter.print_full_documentation()
@@ -50,7 +43,6 @@ def main():
             elif args.clean_up:
                 args_handler.handle_clean_up()
             else:
-                # If invalid arguments are provided, suggest the closest valid options
                 valid_options = ["--document", "--generate_data", "--load_configs", "--config", "--flattened_keys", "--json_keys", "--clean_up", "--output_file", "--file_format"]
                 suggested_options = suggest_closest_options(sys.argv[1], valid_options)
                 click.echo(f"Invalid option! Did you mean one of these: {', '.join(suggested_options)}")
