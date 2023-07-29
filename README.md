@@ -21,7 +21,7 @@ Follow these instructions to get started with DataSynthoSphere:
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/YourUsername/DataSynthoSphere.git
+git clone [https://github.com/YourUsername/DataSynthoSphere.git](https://github.com/minlets/DataSynthoSphere)
 cd DataSynthoSphere
 python setup.py
 python src/main/main.py
