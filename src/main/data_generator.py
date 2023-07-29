@@ -16,4 +16,4 @@ class DataGenerator:
         print("# ... (The existing generate_data function)")
 
     def validate_generated_data(self, data):
-        print(#validate_generated_data")
+        print("#validate_generated_data")
