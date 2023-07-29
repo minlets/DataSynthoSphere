@@ -19,8 +19,48 @@ DataSynthoSphere is an innovative and cutting-edge AI-powered Synthetic Data pro
 Follow these instructions to get started with DataSynthoSphere:
 
 1. Clone the repository.
-2. Install the required dependencies using `pip install -r requirements.txt`.
+
+```bash
+git clone https://github.com/YourUsername/DataSynthoSphere.git
+cd DataSynthoSphere
+python setup.py
+python src/main/main.py
+```
 3. Run the DataSynthoSphere application and explore the AI-powered Synthetic Data generation capabilities.
+
+
+##Project Structure
+DataSynthoSphere/
+├── configs/
+│   ├── config.json
+│   └── config.yaml
+├── data/
+│   └── raw_data.csv
+├── dependencies/
+│   └── library1/
+│       └── __init__.py
+├── output/
+│   └── result.json
+├── src/
+│   ├── main/
+│   │   ├── __init__.py
+│   │   ├── config_handler.py
+│   │   ├── data_generator.py
+│   │   ├── interactive_mode.py
+│   │   └── main.py
+├── metadata/
+│   ├── data_description.txt
+│   └── model_metadata.json
+├── staging/
+│   └── data_for_training.csv
+├── templates/
+│   └── template.py
+├── LICENSE
+├── README.md
+├── build/
+├── dist/
+├── setup.py
+└── DataSynthoSphere.egg-info/
 
 ## Contribution Guidelines
 
