@@ -10,10 +10,10 @@ from openpyxl.drawing.image import Image
 
 class DataGenerator:
     def __init__(self):
-        # ... (Initialize necessary variables and data structures)
+        print("# ... (Initialize necessary variables and data structures)")
 
     def generate_data(self, output_file=None, file_format='json'):
-        # ... (The existing generate_data function)
+        print("# ... (The existing generate_data function)")
 
     def validate_generated_data(self, data):
-        #
+        print(#validate_generated_data")
