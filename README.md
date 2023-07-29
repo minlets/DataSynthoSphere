@@ -30,6 +30,7 @@ python src/main/main.py
 
 
 ##Project Structure
+```bash
 DataSynthoSphere/
 ├── configs/ # Configuration files directory
 │ ├── config.json # Configuration file in JSON format
@@ -61,7 +62,7 @@ DataSynthoSphere/
 ├── dist/ # Distribution directory containing generated distributable files
 ├── setup.py # Setup script for packaging the project
 └── DataSynthoSphere.egg-info/ # Metadata directory for the packaged project (created after running setup.py)
-
+```
 ## Contribution Guidelines
 
 We welcome contributions from the community to enhance and improve DataSynthoSphere. If you have any bug fixes, new features, or improvements, please submit a pull request following our contribution guidelines.
