@@ -12,17 +12,41 @@ JSON_KEYS_FILENAME = os.path.join(CONFIGS_DIR, "json_keys")
 GENERATED_DATA_FILE_NAME = os.path.join(CONFIGS_DIR, "generated_data")
 
 DEFAULT_CONFIG_DATA = {
-    # ... (Default configuration data)
+    "MAX_FLATTENED_ROWS": 100,
+    "MAX_DUPLICATES_ROWS": 2,
+    "PARTITIONED_KEY": True,
+    "PRIMARY_KEY": True,
+    "HASH_KEY": True,
+    "META_NEEDED": True,
+    "COMPLICATED_JSON": True,
+    "MAX_FLATTENED_KEYS": 1,
+    "MAX_JSON_LEVEL": 2,
+    "MAX_COLUMNS_WITH_JSON_FIELDS": 2,
+    "MAX_ROWS_IN_JSON_ARRAY": 100,
+    "MAX_COLUMNS_TO_HAVE_DUPLICATES_ROWS": 2,
+    "MAX_KEYS_IN_EACH_LEVEL": 2,
+    "MAX_LENGTH_OF_INT_OR_STR_ARRAY": 100,
+    "MAX_LENGTH_OF_JSON_ARRAY": 100,
+    "PERCENTAGE_OF_STRINGS": 100,
+    "PERCENTAGE_OF_INT": 100,
+    "PERCENTAGE_OF_FLOAT": 100,
 }
 
 DEFAULT_JSON_KEYS_DATA = {
-    # ... (Default JSON keys data)
+    "JSON_KEYS": [
+        {"ATTRIBUTE": "reported_health_problems", "VALUES": ["Persistent vomiting", "Coughing", "Dizzy", "Acute mental status changes"]},
+        {"ATTRIBUTE": "nonuser_affected", "VALUES": ["No", "Yes"]},
+        {"ATTRIBUTE": "date_submitted", "VALUES": ["05/10/2022", "05/11/2007", "08/05/2020"]}
+    ]
 }
 
 DEFAULT_FLATTENED_KEYS_DATA = {
-    # ... (Default flattened keys data)
+    "FLATTENED_KEYS": [
+        {"ATTRIBUTE": "City", "VALUES": ["New York", "Los Angeles", "Chicago", "Houston", "San Francisco", "Miami", "Seattle", "Boston", "Dallas", "Atlanta", "Denver", "Phoenix", "Philadelphia", "Las Vegas", "San Diego"]},
+        {"ATTRIBUTE": "Weather", "VALUES": ["Sunny", "Rainy", "Cloudy", "Snowy", "Windy", "Foggy", "Thunderstorms", "Partly Cloudy", "Hail", "Misty", "Showers", "Hot", "Cold", "Humid", "Dry"]},
+        {"ATTRIBUTE": "Activity", "VALUES": ["Running", "Swimming", "Cycling", "Hiking", "Yoga", "Dancing", "Gymnastics", "Meditation", "Skiing", "Soccer", "Basketball", "Surfing", "Gardening", "Painting", "Cooking"]}
+    ]
 }
-
 
 class ConfigHandler:
     def __init__(self, file_format='json'):
