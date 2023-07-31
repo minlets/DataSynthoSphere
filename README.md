@@ -28,41 +28,6 @@ python src/main/main.py
 ```
 3. Run the DataSynthoSphere application and explore the AI-powered Synthetic Data generation capabilities.
 
-
-## Project Structure
-```bash
-DataSynthoSphere/
-├── configs/ # Configuration files directory
-│ ├── config.json # Configuration file in JSON format
-│ └── config.yaml # Configuration file in YAML format
-├── data/ # Data directory
-│ └── raw_data.csv # Raw data file used as input for synthetic data generation
-├── dependencies/ # External libraries or custom dependencies directory
-│ └── library1/
-│ └── init.py
-├── output/ # Output directory
-│ └── result.json # Generated synthetic data output
-├── src/ # Source code directory
-│ ├── main/ # Main Python module directory
-│ │ ├── init.py
-│ │ ├── config_handler.py # Module for handling configurations
-│ │ ├── data_generator.py # Module for generating synthetic data
-│ │ ├── interactive_mode.py # Module for interactive mode (not shown in the project structure)
-│ │ └── main.py # Main entry point for the data generation script
-├── metadata/ # Metadata directory
-│ ├── data_description.txt # Description of data used for synthetic data generation
-│ └── model_metadata.json # Metadata related to the model (not shown in the project structure)
-├── staging/ # Staging directory for data used in training or other purposes
-│ └── data_for_training.csv # Staging data file (not shown in the project structure)
-├── templates/ # Templates directory
-│ └── template.py # Template file (not shown in the project structure)
-├── LICENSE # License file for the project
-├── README.md # README file providing project information and instructions
-├── build/ # Build artifacts directory (created after running setup.py)
-├── dist/ # Distribution directory containing generated distributable files
-├── setup.py # Setup script for packaging the project
-└── DataSynthoSphere.egg-info/ # Metadata directory for the packaged project (created after running setup.py)
-```
 ## Contribution Guidelines
 
 We welcome contributions from the community to enhance and improve DataSynthoSphere. If you have any bug fixes, new features, or improvements, please submit a pull request following our contribution guidelines.
