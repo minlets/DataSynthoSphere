@@ -14,19 +14,51 @@ DataSynthoSphere is an innovative and cutting-edge AI-powered Synthetic Data pro
 
 - **Seamless Integration:** The DataSynthoSphere platform seamlessly integrates into existing data ecosystems, ensuring a smooth and efficient data generation process. It provides an intuitive interface for easy data management and insights extraction.
 
-## Getting Started
+## Getting Started:
+----------------
+To use DataSynthoSphere, follow these steps:
 
-Follow these instructions to get started with DataSynthoSphere:
+1. Clone the repository:
+   git clone https://github.com/minlets/DataSynthoSphere
+   cd DataSynthoSphere
 
-1. Clone the repository.
+2. Set up the application:
+   python setup.py
 
-```bash
-git clone https://github.com/minlets/DataSynthoSphere
-cd DataSynthoSphere
-python setup.py
-python src/main/main.py
-```
-3. Run the DataSynthoSphere application and explore the AI-powered Synthetic Data generation capabilities.
+3. Run the DataSynthoSphere CLI application:
+   python src/main/main.py [options]
+
+## Available Options:
+------------------
+The DataSynthoSphere CLI supports the following options:
+
+1. --document: Display the full code documentation.
+
+2. --generate_data: Generate synthetic data using the given configuration.
+   - --output_file: Specify the path to the output file for generated synthetic data (default: "configs/generated_data.json").
+   - --file_format: Choose the file format for the generated data (json or yaml). Default is json.
+
+3. --load_configs: Load default configurations or configurations from specified files.
+   - --config: Path to the configuration file (json or yaml).
+   - --flattened_keys: Path to the flattened keys file (json or yaml).
+   - --json_keys: Path to the json keys file (json or yaml).
+   - --file_format: File format for configurations (json or yaml). Default is json.
+
+4. --clean_up: Remove all generated files and configurations.
+
+## Example Usages:
+---------------
+1. Display full documentation:
+   python src/main/main.py --document
+
+2. Generate synthetic data with custom output file and format:
+   python src/main/main.py --generate_data --output_file path/to/output_file.json --file_format yaml
+
+3. Load configurations from custom files:
+   python src/main/main.py --load_configs --config path/to/config.json --flattened_keys path/to/flattened_keys.json --json_keys path/to/json_keys.yaml --file_format json
+
+4. Clean up generated files and configurations:
+   python src/main/main.py --clean_up
 
 ## Contribution Guidelines
 
