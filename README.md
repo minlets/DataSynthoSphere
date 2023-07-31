@@ -49,16 +49,24 @@ The DataSynthoSphere CLI supports the following options:
 ## Example Usages:
 ---------------
 1. Display full documentation:
+   ```bash
    python src/main/main.py --document
+   ```bash
 
 2. Generate synthetic data with custom output file and format:
+   ```bash
    python src/main/main.py --generate_data --output_file path/to/output_file.json --file_format yaml
+   ```bash
 
 3. Load configurations from custom files:
+   ```bash
    python src/main/main.py --load_configs --config path/to/config.json --flattened_keys path/to/flattened_keys.json --json_keys path/to/json_keys.yaml --file_format json
+   ```bash
 
-4. Clean up generated files and configurations:
+5. Clean up generated files and configurations:
+   ```bash
    python src/main/main.py --clean_up
+   ```bash
 
 ## Contribution Guidelines
 
