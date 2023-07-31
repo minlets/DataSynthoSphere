@@ -109,3 +109,4 @@ Remove all generated files and configurations.
             click.echo("  python src/main/main.py --generate_data [options]")
             click.echo("  python src/main/main.py --load_configs [options]")
             click.echo("  python src/main/main.py --clean_up")
+
