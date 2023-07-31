@@ -5,11 +5,7 @@ import logging
 import argparse
 from typing import Dict, Any
 
-CONFIGS_DIR = "configs"
-CONFIG_FILENAME = os.path.join(CONFIGS_DIR, "config")
-FLATTENED_KEYS_FILENAME = os.path.join(CONFIGS_DIR, "flattened_keys")
-JSON_KEYS_FILENAME = os.path.join(CONFIGS_DIR, "json_keys")
-GENERATED_DATA_FILE_NAME = os.path.join(CONFIGS_DIR, "generated_data")
+
 
 DEFAULT_CONFIG_DATA = {
     "MAX_FLATTENED_ROWS": 100,
@@ -48,27 +44,19 @@ DEFAULT_FLATTENED_KEYS_DATA = {
     ]
 }
 
+def dot_join(*args):
+    return '.'.join(args)
 class ConfigHandler:
-    def __init__(self, file_format='json'):
-        self.file_format = file_format
-
-    def parse_arguments(self):
-        parser = argparse.ArgumentParser(description="Data Generation Script", epilog="Use --help with any argument to get more information.")
-        parser.add_argument("--document", action="store_true", help="Display full code documentation.")
-        parser.add_argument("--generate_data", nargs='*', help="Generate data using the given configuration.")
-        parser.add_argument("--load_configs", nargs='*', help="Load default configurations or from specified files.")
-        parser.add_argument("--config", help="Path to the configuration file (json or yaml).")
-        parser.add_argument("--flattened_keys", help="Path to the flattened keys file (json or yaml).")
-        parser.add_argument("--json_keys", help="Path to the json keys file (json or yaml).")
-        parser.add_argument("--clean_up", action="store_true", help="Remove all generated files and configurations.")
-        parser.add_argument("--output_file", default=GENERATED_DATA_FILE_NAME, help="Output filename for generated data (JSON)")
-        parser.add_argument("--file_format", choices=["json", "yaml"], default="json", help="File format for configurations (json or yaml). Default is json.")
-
-        return parser.parse_args()
-
+    def __init__(self, CONFIGS_DIR = 'configs',CONFIG_FILENAME='config',FLATTENED_KEYS_FILENAME='flattened_keys',JSON_KEYS_FILENAME='json_keys',GENERATED_DATA_FILE_NAME='generated_data',INPUT_FORMAT='json',OUTPUT_FORMAT='json'):
+        self.CONFIGS_DIR=CONFIGS_DIR
+        self.INPUT_FORMAT = INPUT_FORMAT
+        self.OUTPUT_FORMAT = OUTPUT_FORMAT
+        self.CONFIG_FILENAME = dot_join(os.path.join(CONFIGS_DIR, CONFIG_FILENAME),INPUT_FORMAT)
+        self.FLATTENED_KEYS_FILENAME = dot_join(os.path.join(CONFIGS_DIR, FLATTENED_KEYS_FILENAME),INPUT_FORMAT)
+        self.JSON_KEYS_FILENAME = dot_join(os.path.join(CONFIGS_DIR, JSON_KEYS_FILENAME),INPUT_FORMAT)
+        self.GENERATED_DATA_FILE_NAME = dot_join(os.path.join(CONFIGS_DIR, GENERATED_DATA_FILE_NAME),OUTPUT_FORMAT)
     def configure_logging(self, log_level=logging.INFO):
         logging.basicConfig(level=log_level, format="%(asctime)s - %(levelname)s - %(message)s")
-
     def clean_up_files(self, *file_paths):
         for file_path in file_paths:
             try:
