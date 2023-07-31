@@ -29,7 +29,7 @@ python src/main/main.py
 3. Run the DataSynthoSphere application and explore the AI-powered Synthetic Data generation capabilities.
 
 
-##Project Structure
+## Project Structure
 ```bash
 DataSynthoSphere/
 ├── configs/ # Configuration files directory
