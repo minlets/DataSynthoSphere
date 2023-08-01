@@ -26,7 +26,7 @@ setuptools.setup(
     keywords='DataSynthoSphere synthetic data AI customer-insights privacy-preserving',
     python_requires='>=3.6, <4',
     install_requires=[
-        'openpyxl>=3.2.0b1',
+        'openpyxl>=3.1',
         'PyYAML>=6.0',
         'click>=7.0',
         'fuzzywuzzy>=0.18.0',
@@ -35,7 +35,7 @@ setuptools.setup(
     ],
     entry_points={
         'console_scripts': [
-            'DataSynthoSphere=App:App'
+            'DataSynthoSphere=DataSynthoSphere:App'
         ],
     },
     project_urls={
