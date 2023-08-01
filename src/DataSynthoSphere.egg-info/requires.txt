@@ -1,0 +1,5 @@
+openpyxl
+PyYAML
+click
+fuzzywuzzy
+config_handler
