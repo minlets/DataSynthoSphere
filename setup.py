@@ -15,9 +15,8 @@ setuptools.setup(
     packages=setuptools.find_packages('src/main'),
     package_dir={'': 'src/main'},
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
