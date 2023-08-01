@@ -10,7 +10,7 @@ setup(
     package_dir={'': 'src'},
     entry_points={
         'console_scripts': [
-            'DataGenerator = App:App'
+            'DataSynthoSphere = App:App'
         ],
     },
     install_requires=[
