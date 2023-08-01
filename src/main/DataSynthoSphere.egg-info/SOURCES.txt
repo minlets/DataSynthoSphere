@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/main/DataSynthoSphere.egg-info/PKG-INFO
+src/main/DataSynthoSphere.egg-info/SOURCES.txt
+src/main/DataSynthoSphere.egg-info/dependency_links.txt
+src/main/DataSynthoSphere.egg-info/entry_points.txt
+src/main/DataSynthoSphere.egg-info/requires.txt
+src/main/DataSynthoSphere.egg-info/top_level.txt

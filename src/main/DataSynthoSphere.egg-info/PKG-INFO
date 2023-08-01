@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: DataSynthoSphere
+Version: 1.0.0
+Summary: DataSynthoSphere is an innovative and cutting-edge AI-powered Synthetic Data project that revolutionizes how organizations understand and interact with their customer data in the digital era. As businesses increasingly shift to online interactions and face stringent data privacy regulations, the need for privacy-preserving customer insights becomes more critical than ever.
+Author: Vidya Sagar Jalla
+Author-email: jallavidya.sagar@icloud.com
+Requires-Python: >=3.10.8
+License-File: LICENSE

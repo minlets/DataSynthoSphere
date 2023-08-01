@@ -1,0 +1,6 @@
+openpyxl==3.2.0b1
+PyYAML==6.0
+click==7.0
+fuzzywuzzy==0.18.0
+config_handler==0.1.0
+python-Levenshtein==0.21.1

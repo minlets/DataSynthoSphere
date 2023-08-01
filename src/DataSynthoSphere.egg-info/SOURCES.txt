@@ -9,10 +9,10 @@ src/DataSynthoSphere.egg-info/requires.txt
 src/DataSynthoSphere.egg-info/top_level.txt
 src/main/App.py
 src/main/ArgsHandler.py
+src/main/ConfigHandler.py
+src/main/DataGenerator.py
 src/main/DocumentationPrinter.py
 src/main/InteractiveMode.py
 src/main/UtilityFunctions.py
 src/main/__init__.py
-src/main/config_handler.py
-src/main/data_generate.py
 src/main/test.py

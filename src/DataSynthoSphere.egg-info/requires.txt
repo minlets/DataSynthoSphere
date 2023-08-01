@@ -3,3 +3,4 @@ PyYAML
 click
 fuzzywuzzy
 config_handler
+python-Levenshtein
