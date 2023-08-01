@@ -1,5 +1,5 @@
 from config_handler import ConfigHandler
-from data_generator import DataGenerator
+from DataGenerator import DataGenerator
 from interactive_mode import InteractiveMode
 from DocumentationPrinter import DocumentationPrinter as dp
 import click
@@ -18,7 +18,7 @@ def suggest_closest_options(user_input, valid_options, threshold=70):
 class ArgsHandler:
     def __init__(self):
         self.config_handler = ConfigHandler()
-        self.data_generator = DataGenerator()
+        self.DataGenerator = DataGenerator()
         self.interactive_mode = InteractiveMode()
     def parse_generate_data_args(self, generate_data_list):
         parser = argparse.ArgumentParser(description="Data Generation Script")
@@ -55,7 +55,7 @@ class ArgsHandler:
                     generate_data_args = self.parse_generate_data_args(args.generate_data)
                     output_file = generate_data_args.output_file if '--output_file' in args.generate_data else args.output_file
                     output_format = generate_data_args.output_format if '--output_format' in args.generate_data else args.output_format
-                    self.data_generator.generate_data(output_file=output_file, output_format=output_format)
+                    self.DataGenerator.generate_data(output_file=output_file, output_format=output_format)
                 else :
                     dp.print_full_documentation(generate_data)   
             elif args.load_configs:

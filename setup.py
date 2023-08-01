@@ -10,7 +10,7 @@ setup(
     package_dir={'': 'src'},
     entry_points={
         'console_scripts': [
-            'data_generator = App:App'
+            'DataGenerator = App:App'
         ],
     },
     install_requires=[
@@ -18,6 +18,7 @@ setup(
         'PyYAML',
         'click',
         'fuzzywuzzy',
-        'config_handler'
+        'config_handler',
+        'python-Levenshtein'
     ],
 )

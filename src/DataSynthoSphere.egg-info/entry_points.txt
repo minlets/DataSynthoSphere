@@ -1,2 +1,2 @@
 [console_scripts]
-data_generator = App:App
+DataGenerator = App:App
